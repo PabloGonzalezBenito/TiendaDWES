@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div style="height:100vh" class="d-flex justify-content-center align-items-center">
+
+        <form id="formregistro" action="" class="form-control w-75 text-bg-light shadow ">
+            <h1 class="my-3">Registro</h1>
+
+            <div class="mb-3 mx-2">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre"
+                    placeholder="Introduce aquí tu nombre">
+            </div>
+
+            <div class="mb-3 mx-2">
+                <label for="apellidos" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="apellidos" name="apellidos"
+                    placeholder="Introduce aquí tus apellidos">
+            </div>
+
+            <div class="mb-3 mx-2">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com">
+            </div>
+
+            <div class="mb-3 mx-2">
+                <label for="direccion" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="direccion" name="direccion"
+                    placeholder="Introduce aquí tu dirección">
+            </div>
+
+            <div class="mb-3 mx-2">
+                <label for="codigopostal" class="form-label">Código Postal</label>
+                <input type="number" class="form-control" id="codigopostal" name="codigopostal"
+                    placeholder="Introduce aquí tu código postal">
+            </div>
+
+            <div class="mb-3 mx-2">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="number" class="form-control" id="telefono" name="telefono"
+                    placeholder="Introduce aquí tu teléfono">
+            </div>
+
+            <div class="mb-3 mx-2">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="contrasenha" name="contrasenha"
+                    placeholder="Introduce aquí tu contraseña">
+            </div>
+
+            <div class="mb-3 mx-2">
+                <label for="password" class="form-label">Repetir Contraseña</label>
+                <input type="password" class="form-control" id="repetircontrasenha" name="repetircontrasenha"
+                    placeholder="Introduce aquí tu contraseña de nuevo">
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="politica">
+                <label class="form-check-label mb-2" for="flexCheckDefault">
+                    Acepto la <a href="">política de cookies y protección de datos de la empresa</a>.
+                </label>
+            </div>
+
+            <div class="d-flex justify-content-center my-3">
+                <input type="submit" class="btn btn-primary w-50" name="registro" value="Registrarse">
+            </div>
+
+            <div class="mx-2">
+                <a href="./login.html" class="d-block my-2">¿Ya tienes una cuenta? Inicia sesión aquí</a>
+            </div>
+
+        </form>
+    </div>
+    <script src="../controladores/registro.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

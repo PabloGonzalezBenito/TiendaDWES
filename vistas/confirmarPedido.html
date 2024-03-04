@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/general.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .fondo {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .fondo::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: url(../imgs/fondo.webp);
+            filter: blur(5px);
+            /* Ajusta el valor según el efecto deseado */
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .navbar {
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img style="width:60px" src="../imgs/logo.PNG" alt="logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Productos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./tiendaRascadores.html">Rascadores</a></li>
+                            <li><a class="dropdown-item" href="./tiendaRopa.html">Ropa</a></li>
+                            <li><a class="dropdown-item" href="./tiendaComida.html">Comida</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="./tienda.html">Ver todo</a></li>
+                        </ul>
+                    </li>
+                    <li class=" admin nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Administrar
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./adminUsuarios.html">Usuarios</a></li>
+                            <li><a class="dropdown-item" href="./adminProductos.html">Productos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <span class="email">No has iniciado sesión</span>
+
+                    <a class="mx-5 carrito" href=""><img style="width: 40px;"
+                            src="../imgs/shopping_cart_FILL0_wght400_GRAD0_opsz24.svg" alt=""></a>
+                    <a href="./login.html" class="iniciarsesion btn btn-outline-success ">Iniciar Sesión</a>
+                    <a href="./registro.html" class="registrarse mx-3 btn btn-outline-secondary">Registrarse</a>
+                    <a href="./index.html" class="cerrarsesion btn btn-outline-danger">Cerrar Sesión</a>
+
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="layout row">
+
+        <form id="formregistro" action="" class="m-5 col-8 col-lg  form-control text-bg-light shadow ">
+            <h2 class="my-3">Completa el pedido</h2>
+
+            <div class="mb-3 mx-2">
+                <label for="nombre" class="form-label">Nombre del titular de la Tarjeta</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="">
+            </div>
+
+            <div class="mb-3 mx-2">
+                <label for="numeroTarjeta" class="form-label">Número de Tarjeta</label>
+                <input type="text" class="form-control" id="numeroTarjeta" name="numeroTarjeta" placeholder="">
+            </div>
+
+            <label for="caducidad" class="form-label">Fecha de Caducidad de la Tarjeta</label>
+            <div class="input-group mb-5">
+
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="">Caducidad</span>
+                </div>
+                <select class="form-control" id="mes">
+                    <option selected disabled value="">Mes</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+
+                </select>
+                <span class="input-group-text" id="">/</span>
+
+                <select class="form-control" id="anho">
+                    <option selected disabled value="">Año</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+
+                </select>
+            </div>
+
+
+            <div class="d-flex justify-content-center my-3">
+                <input type="submit" class="confirmar btn btn-success w-50" name="registro" value="Confirmar Pedido">
+            </div>
+        </form>
+
+        <div class="pedido m-5 col-4 col-lg form-control text-bg-light shadow">
+            <h2>Resumen del pedido</h2>
+
+        </div>
+
+    </div>
+    <script src="../controladores/carrito.js"></script>
+    <script src="../controladores/confirmarPedido.js"></script>
+    <script src="../controladores/general.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+
+</html>

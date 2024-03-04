@@ -1,0 +1,13 @@
+.cerrarsesion{
+    visibility:hidden;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 500px; /* Establece la altura deseada */
+    width: 100%; /* Opcional: Usa el 100% del ancho del contenedor */
+}
+
+.admin{
+    visibility: hidden;
+}
